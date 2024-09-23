@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배송 요청사항</title>
+    <link rel="stylesheet" href="RequestPopUp.css">
+</head>
+<body>
+
+<!-- 팝업 전체 컨테이너 -->
+<div class="popup-container">
+    <div class="popup">
+        <!-- 팝업 헤더 -->
+        <div class="popup-header">
+            <span class="back-btn">&#8592;</span> <!-- 뒤로가기 버튼 -->
+            <h2>배송 요청사항</h2>
+            <span class="close-btn">&times;</span> <!-- 닫기 버튼 -->
+        </div>
+
+        <!-- 요청사항 옵션들 -->
+        <div class="request-options">
+            <label>
+                <input type="radio" name="request" value="none"> 요청사항 없음
+            </label>
+            <label>
+                <input type="radio" name="request" value="door"> 문 앞에 놓아주세요
+            </label>
+            <label>
+                <input type="radio" name="request" value="security"> 경비실에 맡겨 주세요
+            </label>
+            <label>
+                <input type="radio" name="request" value="fragile"> 파손 위험 상품입니다. 배송시 주의해주세요
+            </label>
+            <label>
+                <input type="radio" name="request" value="custom" id="customRequest"> 직접 입력
+            </label>
+        </div>
+
+        <!-- 텍스트 입력 영역 -->
+        <textarea id="customTextArea" class="custom-input" placeholder="요청사항을 입력하세요..." disabled></textarea>
+
+        <!-- 저장하기 버튼 -->
+        <button class="save-btn">저장 하기</button>
+    </div>
+</div>
+
+<script>
+    // 직접 입력을 선택할 경우 텍스트박스 활성화
+    document.getElementById('customRequest').addEventListener('change', function() {
+        document.getElementById('customTextArea').disabled = false;
+    });
+
+    // 다른 옵션을 선택할 경우 텍스트박스 비활성화
+    const options = document.getElementsByName('request');
+    for (let i = 0; i < options.length; i++) {
+        options[i].addEventListener('change', function() {
+            if (this.value !== 'custom') {
+                document.getElementById('customTextArea').value = '';
+                document.getElementById('customTextArea').disabled = true;
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

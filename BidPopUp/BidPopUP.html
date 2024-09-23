@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입찰 팝업</title>
+    <link rel="stylesheet" href="BidPopUp.css">
+</head>
+<body>
+
+<!-- 팝업 컨테이너 -->
+<div class="popup-container">
+    <div class="popup">
+        <!-- 팝업 헤더 -->
+        <div class="popup-header">
+            <h2>입찰 하기</h2>
+            <span class="close-btn">&times;</span> <!-- 닫기 버튼 -->
+        </div>
+
+        <!-- 타이머 -->
+        <div class="popup-timer">
+            <p>⏰ 12일 3시간 18분 후 종료</p>
+        </div>
+
+        <!-- 현재 입찰가 -->     
+        <div class="popup-current-bid">
+            <h3>현재 입찰가</h3>
+            <h1>100,000,000 원</h1>
+            <p>BID 입찰 8건</p>
+        </div>
+
+        <!-- 구매 희망가 입력 -->
+        <div class="popup-bid-input">
+            <label for="bidAmount">구매 희망가</label>
+            <div class="bid-amount-container">
+                <span class="bid-amount">100,000,100</span><span class="currency">원</span>
+            </div>
+            <p class="bid-info">최종 결제금액은 다음 화면에서 계산됩니다.</p>
+        </div>
+
+        <!-- 입찰 버튼 -->
+        <button class="bid-btn">입찰하기</button>
+
+        <!-- 경고 메시지 -->
+        <p class="popup-warning">입금확인이 되지 않아 미입금 2건이 누적되는 경우, <br>
+            사이트 이용이 자동으로 일시제한됩니다. <br>
+            상품의 이미지를 상세히 확인하여 신중한 입찰 부탁드립니다.</p>
+    </div>
+</div>
+
+    <script>
+        // 팝업 닫기
+        document.getElementById('close-btn').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

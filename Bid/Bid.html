@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제 페이지</title>
+    <link rel="stylesheet" href="Bid.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">BidSync</div>
+            <div class="search-bar">
+                <input type="text" placeholder="검색어를 입력해주세요">
+                <button>검색</button>
+            </div>
+            <div class="user-options">
+                <span>🛒</span> <!-- 장바구니 아이콘 -->
+                <span>👤</span> <!-- 사용자 아이콘 -->
+                <span>↩️</span> <!-- 로그아웃 아이콘 -->
+            </div>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="nav">
+            <ul>
+                <li class="more-btn">☰</li> <!-- 더보기 버튼 -->
+                <li>패션</li>
+                <li>디지털·가전</li>
+                <li>스포츠</li>
+                <li>홈·데코</li>
+                <li>완구</li>
+                <li>미술</li>
+                <li>쥬얼리</li>
+            </ul>
+        </nav>
+        <br>
+
+        <!-- 주문 상품 Section -->
+        <div class="order-product">
+            <div class="product-image">
+                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/170356472022385905.jpg?gif=1&w=640&h=640&c=c&webp=1" alt="상품 이미지">
+            </div>
+            <div class="product-details">
+                <h2>상품명</h2>
+                <p><strong>100,000,100원</strong></p>
+                <p>배송비 5,000원</p>
+            </div>
+        </div>
+
+        <!-- 배송 주소 Section -->
+        <div class="shipping-info">
+            <div class="info-header">
+                <h2>배송 주소</h2>
+                <button class="address-change-btn">주소 변경</button>
+            </div>
+            <div class="address-details">
+                <div class="row">
+                    <h4></h4><p class="label"><strong>받는 분</strong></p>
+                    <p class="value">홍길동</p>
+                </div>
+                <div class="row">
+                    <p class="label"><strong>연락처</strong></p>
+                    <p class="value">010-XXXX-XXXX</p>
+                </div>
+                <div class="row">
+                    <p class="label"><strong>주소</strong></p>
+                    <p class="value">[000000] XX XX시 XX구 XX로 00-0 XXX아파트 X동 X호</p>
+                </div>
+            </div>
+            <div class="request-popup-trigger">
+                <button id="request-button" class="custom-button">요청사항 없음</button>
+            </div>
+        </div>
+
+        <!-- 결제 방법 Section -->
+        <div class="payment-method">
+            <h2>결제 방법</h2>
+            <div class="payment-options">
+                <label>
+                    <input type="radio" name="payment" checked>
+                    카드 간편결제
+                </label>
+                <label>
+                    <input type="radio" name="payment">
+                    카드 일반결제
+                </label>
+                <label>
+                    <input type="radio" name="payment">
+                    카카오페이
+                </label>
+                <label>
+                    <input type="radio" name="payment">
+                    무통장입금
+                </label>
+            </div>
+            <div class="card-info">
+                <span>KB 국민 XXXX-XXXX-XXXX-XXXX</span>
+                <span class="arrow">▶</span>
+            </div>
+            <p class="notice">
+                구매 입찰은 일시불만 지원합니다. 체결 후 결제 정보 변경은 불가하며 분할 납부 변경은 카드사 문의 바랍니다. <br>
+                단, 카드사별 정책에 따라 분할 납부 변경 시 수수료가 발생할 수 있습니다.
+            </p>
+        </div>
+
+
+
+        <!-- 최종 주문 정보 섹션 -->
+        <div class="final-order-info">
+            <h3>최종 주문정보</h3>
+            
+            <!-- 입찰 희망가와 가격 정보 -->
+            <div class="price-summary">
+                <span>입찰 희망가</span>
+                <span class="price">100,000,100 원</span>
+            </div>
+
+            <!-- 구분선 -->
+            <hr class="dotted-line">
+            
+            <!-- 배송비 -->
+            <div class="price-summary">
+                <span>배송비</span>
+                <span class="price">+ 5,000 원</span>
+            </div>
+            
+            <!-- 수수료 -->
+            <div class="price-summary">
+                <span>수수료</span>
+                <span class="price">+ 1,000 원</span>
+            </div>
+
+            
+
+            <!-- 총 결제금액 -->
+            <div class="total-amount">
+                <span>총 결제금액</span>
+                <span class="total-price">100,006,100 원</span>
+            </div>
+        </div>
+
+        <!-- 구매하기 Button -->
+        <button class="purchase-btn">구매 하기</button>
+
+        <!-- Footer -->
+    <footer class="footer">
+    <p>&copy; 2024 BidSync. All rights reserved.</p>
+</footer>
+    </div>
+</body>
+</html>
